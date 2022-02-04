@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>CHMap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <link href="css/index.css" rel="stylesheet" />
+    <script src="../dist/chmap-leaflet-layers-panel.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <main class="col ps-md-2">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div id="toolbar" class="container-fluid justify-content-md-around">
+                    <div id="toolbar-dynamic" class="container" ></div>
+                    <button id="layers-toggle-btn"
+                            class="btn btn-outline-success btn-sm p-0">
+                        <i class="bi bi-list bi-lg py-2 p-1"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="border">
+                <div id="map" />
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+<script type="module" src="js/index.js" />
+</html>
