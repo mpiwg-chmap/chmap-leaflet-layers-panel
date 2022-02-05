@@ -4,8 +4,6 @@ function initMap() {
 
     MapLayersController.init();
 
-    const map = MapLayersController.getMap();
-
 }
 
 function initToolbar(){
