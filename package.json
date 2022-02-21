@@ -1,6 +1,6 @@
 {
   "name": "@chmap/leaflet-layers-panel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The floating panel for leaflet's base and over layers. It doesn't occupy any space of the map component and users can add any WMTS layer on their own. This is the first independent feature of the CHMap project belonging to MPIWG.",
   "lib-main": "lib/js/index.js",
   "main": "dist/chmap-leaflet-layers-panel.js",
@@ -17,7 +17,7 @@
     "leaflet"
   ],
   "author": "calvin yeh",
-  "license": "MIT",
+  "license": "GNU GPLv3",
   "dependencies": {
     "@babel/runtime": "^7.16.7",
     "@babel/runtime-corejs3": "^7.16.8",
