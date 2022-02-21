@@ -2,7 +2,7 @@ const { MapLayersController } = window.chmapLeafletLayersPanel;
 
 function initMap() {
 
-    MapLayersController.init();
+    MapLayersController.init('map');
 
 }
 

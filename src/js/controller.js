@@ -7,11 +7,11 @@ const MapLayersController = function() {
 
     let map = null;
 
-    function init() {
+    function init(mapId) {
 
         const {baseLayers, defaultLayer} = BaseLayerFactory.create();
 
-        map = L.map("map", {
+        map = L.map(mapId, {
             center: [35, 108],
             attributionControl: false,
             zoom: 4,
@@ -21,11 +21,11 @@ const MapLayersController = function() {
         });
 
         map.whenReady(
-        () => {
-            //sometimes, leaflet component doesn't expand its height in a good result initially.
-            //trigger a window resize event to force it to re-calculate its available height again.
-            window.dispatchEvent(new Event('resize'));
-        }
+            () => {
+                //sometimes, leaflet component doesn't expand its height in a good result initially.
+                //trigger a window resize event to force it to re-calculate its available height again.
+                window.dispatchEvent(new Event('resize'));
+            }
         )
 
         map.removeControl(map.zoomControl);
