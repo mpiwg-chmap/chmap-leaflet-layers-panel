@@ -4,7 +4,7 @@ This project provides a list contains base-layers and over-layers for leaflet.js
 
 ## Demos
 
-- [example](http://www.github.io/chmap/leaflet-layers-panel/example)
+After you downloaded or cloned the project, you can open index.html under the example folder.
 
 ## Getting Started
 
