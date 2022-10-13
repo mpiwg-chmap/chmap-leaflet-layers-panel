@@ -46,13 +46,20 @@ const CHGISLayerConfig = {
     attribution:  '&copy; <a href="http://chgis.fas.harvard.edu/" target="_blank">CHGIS</a> contributors',
     urlTmpl: '${url}',
     layers: [
-        { label: "China 1911", url: "https://chmap.mpiwg-berlin.mpg.de/t/China1911/{z}/{x}/{y}.png" },
         { label: "China 1820 Province", url: "https://logart.mpiwg-berlin.mpg.de/ts/re.php?l=China_1820_prov_pgn-{z}-{x}-{y}-png" },
         { label: "China 1820 Province name", url: "https://logart.mpiwg-berlin.mpg.de/ts/re.php?l=China_1820_prov_pts-{z}-{x}-{y}-png" },
         { label: "China 1820 Prefecture", url: "https://logart.mpiwg-berlin.mpg.de/ts/re.php?l=China_1820_pref_pgn-{z}-{x}-{y}-png" },
         { label: "China 1820 Prefecture name", url: "https://logart.mpiwg-berlin.mpg.de/ts/re.php?l=China_1820_pref_pts-{z}-{x}-{y}-png" },
         { label: "China 1820 county name", url: "https://logart.mpiwg-berlin.mpg.de/ts/re.php?l=China_1820_county_pts-{z}-{x}-{y}-png" },
-        { label: "China 1820 town name", url: "https://logart.mpiwg-berlin.mpg.de/ts/re.php?l=China_1820_twn_pts-{z}-{x}-{y}-png" }
+        { label: "China 1820 town name", url: "https://logart.mpiwg-berlin.mpg.de/ts/re.php?l=China_1820_twn_pts-{z}-{x}-{y}-png" },
+        { label: "China 1911", url: "https://chmap.mpiwg-berlin.mpg.de/t/China1911/{z}/{x}/{y}.png" },
+        { label: "China 1910 Province", url: "https://logart.mpiwg-berlin.mpg.de/ts/t/China_1911_prov_pgn/{z}/{x}/{y}.png" },
+        { label: "China 1910 Province name", url: "https://logart.mpiwg-berlin.mpg.de/ts/t/China_1911_prov_name/{z}/{x}/{y}.png" },
+        { label: "China 1910 Prefecture", url: "https://logart.mpiwg-berlin.mpg.de/ts/t/China_1911_pref_pgn/{z}/{x}/{y}.png" },
+        { label: "China 1910 Prefecture name", url: "https://logart.mpiwg-berlin.mpg.de/ts/t/China_1911_pref_name/{z}/{x}/{y}.png" },
+        { label: "China 1910 county", url: "https://logart.mpiwg-berlin.mpg.de/ts/t/China_1911_cnty_pgn/{z}/{x}/{y}.png" },
+        { label: "China 1910 county name", url: "https://logart.mpiwg-berlin.mpg.de/ts/t/China_1911_cnty_name/{z}/{x}/{y}.png" },
+        { label: "China 1910 town name", url: "https://logart.mpiwg-berlin.mpg.de/ts/t/China_1911_twn_name/{z}/{x}/{y}.png" },
     ]
 };
 
