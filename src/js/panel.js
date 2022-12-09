@@ -282,7 +282,15 @@ ${getLayerLabelBtns(layer.options)}
 
                 if (activeLayer) {
                     if (e.target.checked) {
-                        activeLayer.addTo(localMap);
+
+                        const opts = activeLayer.options;
+
+                        if(opts.layerType === 'tiles' || opts.dataLoaded) {
+                            activeLayer.addTo(localMap);
+                        } else if (opts.initFn) {
+                            opts.initFn(activeLayer, afterInitDataLayer);
+                        }
+
                     } else {
                         localMap.removeLayer(activeLayer);
                     }
@@ -293,7 +301,27 @@ ${getLayerLabelBtns(layer.options)}
 
     }
 
-    function getLayerLabelBtns({label, layerId, center, removable, ifffBtnParams}) {
+    function afterInitDataLayer(dataLayer){
+
+        const { layerId } = dataLayer.options;
+
+        for(let idx = 0, len = rawOverLayers.length; idx < len; idx++) {
+
+            const currentOpts = rawOverLayers[idx].options;
+
+            if (currentOpts.layerId === layerId) {
+                rawOverLayers[idx] = dataLayer;
+                break;
+            }
+        }
+
+        dataLayer.addTo(localMap);
+
+    }
+
+    function getLayerLabelBtns({label, layerId, layerType, center, removable, ifffBtnParams}) {
+
+        if(layerType !== 'tiles') return label;
 
         //TODO: button's icons are highly coupling to a UI library
 

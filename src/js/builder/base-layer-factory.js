@@ -1,5 +1,6 @@
 import L from "leaflet";
 import 'leaflet-providers';
+import './leaflet.geocsv-src';
 
 import baseLayers from "./layers-config/baselayers";
 

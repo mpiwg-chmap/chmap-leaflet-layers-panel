@@ -2,7 +2,9 @@ const MPIWGLayerConfig = {
     label: '<span title="Land Survey Maps of China, 中国大陸五万分の一地図集成, 1:50000">Land Survey Maps</span>(<a href="http://www.mpiwg-berlin.mpg.de" target="_blank">MPIWG</a> <a href="https://history.sjtu.edu.cn/En" target="_blank">SJTU</a>) <span title="Display Layer/Move map/Copy Tileset/ Name"></span>',
     attribution: 'service provider: <a target="_blank" href="https://www.mpiwg-berlin.mpg.de/">MPIWG</a>',
     urlTmpl: 'https://chmap.mpiwg-berlin.mpg.de/${url}/{z}/{x}/{y}.png',
+    defaultLayerType: 'tile',
     layers: [
+        { label: 'Metadata', url: "./data/metadata_chmap5.tsv", center: null, type: 'tsv'},
         { label: '遼寧 Liaoning', url: "liaoning", center: { lat: 39.823765135446436, lng: 122.3319697380066}},
         { label: '直隸 Zhili', url: "zhili", center: { lat: 39.554585263942144, lng: 117.12818384170534}},
         { label: '山西 Shanxi', url: "shanxi", center: { lat: 35.349777103399575, lng: 111.4178252220154}},
@@ -21,7 +23,7 @@ const MPIWGLayerConfig = {
         { label: '廣東 Guangdong', url: "guangdong", center: { lat: 22.971355162984544, lng: 112.94367760419847}},
         { label: '廣西 Guangxi', url: "guangxi", center: { lat: 23.86095235707954, lng: 109.5296895503998}},
         { label: '雲南 Yunnan', url: "yunnan", center: { lat: 24.109988279518042, lng: 103.89181109145287}},
-        { label: '海南 Hainan', url: "hainan", center: { lat: 19.168929003464914, lng: 109.76565420627595}}
+        { label: '海南 Hainan', url: "hainan", center: { lat: 19.168929003464914, lng: 109.76565420627595}},
     ]
 };
 
